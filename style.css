@@ -1,0 +1,164 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: poppins, sans-serif;
+  background: linear-gradient(
+    0deg,
+    rgba(13, 222, 211, 1) 0%,
+    rgba(51, 181, 11, 1) 100%
+  );
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+.converter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.money-row {
+  display: flex;
+  gap: 15px;
+  align-items: end;
+}
+
+.money-input {
+  flex: 2;
+}
+
+.money-select {
+  flex: 1;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  background: #f8f9fa;
+  border-radius: 12px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #33b50b;
+  background: white;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+  transform: translateY(-3px);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 600;
+  text-align: left;
+}
+
+.converter-btn {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(51, 181, 11, 1) 0%,
+    rgba(6, 167, 199, 1) 100%
+  );
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.converter-btn:hover {
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+  transform: translateY(-3px);
+}
+
+.loading {
+  margin: 20px;
+}
+
+.spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #33b50b;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  margin: 0 auto;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.info {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #666;
+}
+
+.result {
+  background: linear-gradient(
+    45deg,
+    rgba(6, 167, 199, 1) 0%,
+    rgba(51, 181, 11, 1) 100%
+  );
+  padding: 20px;
+  margin-top: 30px;
+  color: fff;
+  font-style: 1rem;
+  font-weight: 600;
+  border-radius: 14px;
+  display: none;
+}
+
+.error {
+  background: linear-gradient(
+    45deg,
+    rgba(6, 167, 199, 1) 0%,
+    rgba(51, 181, 11, 1) 100%
+  );
+  color: fff;
+  padding: 15px;
+  border-radius: 10;
+  margin-top: 20px;
+  display: none;
+}
